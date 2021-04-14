@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Update Pokemon</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:700">
+    </head>
+
+    <body>
+        <div class="container">
+             <h1>Update Pokemon</h1>
+
+            {% if data %}
+                <form action="/update-pokemon" method="post">
+                    <table class="form">
+                        <tr>
+                            <td class="input">
+                                <label for="pokemon_id">
+                                    Pokemon ID
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="number"
+                                       name="pokemon_id"
+                                       id="pokemon_id"
+                                       value="{{ data[0] }}"
+                                       readonly>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="input">
+                                <label for="Name">
+                                    Name
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="text"
+                                       name="Name"
+                                       id="Name"
+                                       value="{{ data[1] }}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="input">
+                                <label for="Type1">
+                                    Type1
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="text"
+                                       name="Type1"
+                                       id="Type1"
+                                       value="{{ data[2] }}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="input">
+                                <label for="Type2">
+                                    Type2
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="text"
+                                       name="Type2"
+                                       id="Type2"
+                                       value="{{ data[3] }}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="input">
+                                <label for="HP">
+                                    HP
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="text"
+                                       name="HP"
+                                       id="HP"
+                                       value="{{ data[4] }}">
+                            </td>
+                        </tr>
+
+                             <tr>
+                            <td class="input">
+                                <label for="Attack">
+                                    Attack
+                                </label>
+                            </td>
+                            <td class="input">
+                                <input type="text"
+                                       name="Attack"
+                                       id="Attack"
+                                       value="{{ data[5] }}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="submit" colspan="2">
+                                <button class="submit"
+                                        type="submit">Submit
+                                </button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+
+            {% else %}
+                <h1> no data</h1>
+            {% endif %}
+        </div>
+
+        <div class="container">
+                 <h1>Remove Pokemon</h1>
+
+                {% if data %}
+                    <form action="/remove-pokemon" method="post">
+                        <table class="form">
+                            <tr>
+                                <td class="input">
+                                    <label for="pokemon_id">
+                                        Pokemon ID
+                                    </label>
+                                </td>
+                                <td class="input">
+                                    <input type="number"
+                                           name="pokemon_id"
+                                           id="pokemon_id"
+                                           value="{{ data[0] }}"
+                                           readonly>
+                                </td>
+                            </tr>
+
+                            <tr>
+                            <td class="submit" colspan="2">
+                                <button class="submit"
+                                        type="submit">Submit
+                                </button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+
+            {% else %}
+                <h1> no data</h1>
+            {% endif %}
+        </div>
+    </body>
+</html>

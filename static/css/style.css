@@ -1,0 +1,42 @@
+body{
+    font-family: Mukta;
+    padding: 30px;
+    background: #161316;
+    color: white;
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid #ffffff;
+}
+
+thead{
+    background-color: #560024;
+}
+
+tbody{
+    background-color: #ff0078;
+}
+
+table.form{
+    width: 60%;
+    border: none;
+    padding: 12px;
+}
+
+td.input {
+    border: none;
+    background: #ff0063;
+}
+
+td.submit {
+    border: none;
+    background: #ff0064;
+}
